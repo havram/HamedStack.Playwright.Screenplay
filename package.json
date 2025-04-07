@@ -40,12 +40,15 @@
     "docs": "rimraf docs && typedoc src/index.ts --excludeExternals --externalPattern \"**/node_modules/**\"",
     "lint-build": "npm run lint && npm run build",
     "lint-build-doc": "npm run clean-install && npm run lint && npm run build && npm run docs",
-	"release": "npm publish --access public"	
+    "release": "npm publish --access public",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui"
   },
   "dependencies": {
     "playwright": "^1.38.1"
   },
   "devDependencies": {
+    "@playwright/test": "1.51.1",
     "@types/node": "^20.7.1",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
@@ -54,7 +57,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "prettier": "^3.0.3",
     "rimraf": "^5.0.5",
-    "typescript": "^5.2.2",
-    "typedoc": "^0.25.1"
+    "typedoc": "^0.25.1",
+    "typescript": "^5.2.2"
   }
 }
